@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import Image from 'next/image'
+import Image from 'next/image';
+import Link from 'next/link';
 
 const Container = styled.div`
-  flex: 1;
+  width: 100%;
   height: 90px;
   display: flex;
   align-items: center;
@@ -18,47 +19,82 @@ const Head = styled.header`
   justify-content: space-between;
 `;
 
+const Logo = styled(Image)`
+  cursor: pointer;
+`;
+
 const Menu = styled.ul`
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   list-style: none;
-
-  li{
+  
+  a{
     color: ${({ theme }) => theme.colors.mainText};
-    font-size: 20px;
     font-weight: 500;
+    text-decoration: none;
     margin-right: 20px;
-    
     cursor: pointer;
+    font-size: 20px;
+    :hover {
+      transition: 250ms ease-in-out;
+      color: ${({ theme }) => theme.colors.contrastText};
+    }
+    :after {
+      display:block;
+      content: '';
+      border-bottom: solid 3px ${({ theme }) => theme.colors.contrastText};
+      transform: scaleX(0);
+      transition: 250ms ease-in-out;
+    }
+    :hover:after {
+      transform: scaleX(1);
+    }
+
+    :last-child{
+      background-color: ${({ theme }) => theme.colors.contrastText};
+      color: ${({ theme }) => theme.colors.mainText};
+      font-size: 18px;
+      padding: 5px;
+      :hover {
+        transition: 250ms ease-in-out;
+        color: ${({ theme }) => theme.colors.primary};
+    }
   }
+  }
+
 `;
 
 export default function Header() {
   return (
     <Container>
       <Head>
-        <Image src="/Marca-completa.png" alt="Logo Brain Br" width={202} height={97} />
+        <Link href="/">
+          <Logo src="/Marca-completa.png" alt="Logo Brain Br" width={135} height={65} />
+        </Link>
         <Menu>
-          <li>
+          <a className="normalLI" href="/sobre">
             Sobre nós
-          </li>
-          <li>
+          </a>
+          <Link className="normalLI" href="/idealizadoras">
             Idealizadoras
-          </li>
-          <li>
+          </Link>
+          <Link className="normalLI" href="/temas">
             Temas
-          </li>
-          <li>
+          </Link>
+          <Link className="normalLI" href="/curso-destaque">
             Curso Destaque
-          </li>
-          <li>
+          </Link>
+          <Link className="normalLI" href="/outros-cursos">
             Outros Cursos
-          </li>
-          <li>
+          </Link>
+          <Link className="normalLI" href="/minha-conta">
             Minha Conta
-          </li>
+          </Link>
+          <Link className="highlightedLI" href="/contato">
+            CONTATO
+          </Link>
         </Menu>
       </Head>
     </Container>

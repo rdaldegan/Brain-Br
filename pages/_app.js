@@ -4,14 +4,6 @@ import Head from 'next/head';
 
 import Header from '../src/components/Header';
 
-const GlobalStyle = createGlobalStyle`
-  body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-`;
-
 const theme = {
   colors: {
     primary: '#0c0852',
@@ -21,7 +13,36 @@ const theme = {
     headerFooterBg: '#0c0852',
     bodyBg: '#FFFFFF',
   },
+  fontFamily: 'Roboto, sans-serif',
 };
+
+const GlobalStyle = createGlobalStyle`
+  * {
+    box-sizing: border-box;
+    :focus{
+      outline: none;
+    }
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    /* New styles */
+    display: flex;
+    flex-direction: column;
+    font-family: ${theme.fontFamily};
+    
+  }
+  html, body {
+    min-height: 100vh;
+  }
+  #__next {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+`;
 
 export default function App({ Component, pageProps }) {
   return (
