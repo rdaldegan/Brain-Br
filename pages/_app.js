@@ -3,6 +3,7 @@ import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import Head from 'next/head';
 
 import Header from '../src/components/Header';
+import Footer from '../src/components/Footer';
 
 const theme = {
   colors: {
@@ -73,6 +74,7 @@ export default function App({ Component, pageProps }) {
       <ThemeProvider theme={theme}>
         <Header />
         <Component {...pageProps} />
+        <Footer />
       </ThemeProvider>
     </>
   );

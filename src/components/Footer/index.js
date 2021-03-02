@@ -1,34 +1,39 @@
 import React from 'react';
 import styled from 'styled-components';
-import Image from 'next/image';
-import Link from 'next/link';
 
 const Container = styled.div`
   width: 100%;
-  height: 90px;
+  height: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: ${({ theme }) => theme.colors.headerFooterBg};
 `;
 
-const Head = styled.header`
+const Foot = styled.header`
   width: 60%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
-`;
+  color: ${({ theme }) => theme.colors.mainText};
 
-const Logo = styled(Image)`
-  cursor: pointer;
+  span {
+    font-size: 18px;
+  }
 `;
 
 export default function Header() {
   return (
     <Container>
-      <Head>
-
-      </Head>
+      <Foot>
+        <h2>
+          Brain-Br
+        </h2>
+        <span>
+          CNPJ: 40.334.793/0001-08
+        </span>
+      </Foot>
     </Container>
   );
 }

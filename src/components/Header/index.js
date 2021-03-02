@@ -70,7 +70,7 @@ export default function Header() {
     <Container>
       <Head>
         <Link href="/">
-          <Logo src="/Marca-completa.png" alt="Logo Brain Br" width={135} height={65} />
+          <Logo src="/Marca-completa.png" alt="Logo Brain Br" width={135} height={65} priority />
         </Link>
         <Menu>
           <a className="normalLI" href="/sobre">
