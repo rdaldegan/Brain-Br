@@ -34,7 +34,7 @@ const Menu = styled.ul`
     color: ${({ theme }) => theme.colors.mainText};
     font-weight: 500;
     text-decoration: none;
-    margin-right: 20px;
+    margin-right: 15px;
     cursor: pointer;
     font-size: 20px;
     :hover {
@@ -55,7 +55,7 @@ const Menu = styled.ul`
     :last-child{
       background-color: ${({ theme }) => theme.colors.contrastText};
       color: ${({ theme }) => theme.colors.mainText};
-      font-size: 18px;
+      font-size: 13px;
       padding: 5px;
       :hover {
         transition: 250ms ease-in-out;
