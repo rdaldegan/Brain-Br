@@ -56,7 +56,8 @@ const Menu = styled.ul`
       background-color: ${({ theme }) => theme.colors.contrastText};
       color: ${({ theme }) => theme.colors.mainText};
       font-size: 16px;
-      padding: 5px;
+      padding: 8px;
+      padding-bottom: 5px;
       :hover {
         transition: 250ms ease-in-out;
         color: ${({ theme }) => theme.colors.primary};
