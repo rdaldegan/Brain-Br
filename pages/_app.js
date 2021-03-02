@@ -33,16 +33,16 @@ export default function App({ Component, pageProps }) {
         <meta name="description" content="Neurociência Psicologia Urbanismo" />
 
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://senhora-baforada-git-main.rdaldegan.vercel.app/" />
+        <meta property="og:url" content="brain-br.vercel.app" />
         <meta property="og:title" content="Brain-Br" />
         <meta property="og:description" content="Neurociência Psicologia Urbanismo" />
-        <meta property="og:image" content="/logo-black.jpg" />
+        <meta property="og:image" content="/round-icon.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://senhora-baforada-git-main.rdaldegan.vercel.app/" />
+        <meta property="twitter:url" content="brain-br.vercel.app" />
         <meta property="twitter:title" content="Brain-Br" />
         <meta property="twitter:description" content="Neurociência Psicologia Urbanismo" />
-        <meta property="twitter:image" content="/logo-black.jpg" />
+        <meta property="twitter:image" content="/round-icon.png" />
 
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet" />

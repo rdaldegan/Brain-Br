@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const Container = styled.div`
   flex: 1;
-  height: 100px;
+  height: 90px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,9 +27,9 @@ const Menu = styled.ul`
 
   li{
     color: ${({ theme }) => theme.colors.mainText};
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 500;
-    margin-right: 25px;
+    margin-right: 20px;
     
     cursor: pointer;
   }
