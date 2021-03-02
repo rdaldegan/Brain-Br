@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const Container = styled.div`
   width: 100%;
-  height: 90px;
+  height: 75px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,9 +34,9 @@ const Menu = styled.ul`
     color: ${({ theme }) => theme.colors.mainText};
     font-weight: 500;
     text-decoration: none;
-    margin-right: 7px;
+    margin-right: 14px;
     cursor: pointer;
-    font-size: 13px;
+    font-size: 18px;
     :hover {
       transition: 250ms ease-in-out;
       color: ${({ theme }) => theme.colors.contrastText};
@@ -56,14 +56,13 @@ const Menu = styled.ul`
       background-color: ${({ theme }) => theme.colors.contrastText};
       color: ${({ theme }) => theme.colors.mainText};
       font-size: 10px;
-      padding: 5px;
+      padding: 16px;
       :hover {
         transition: 250ms ease-in-out;
         color: ${({ theme }) => theme.colors.primary};
+      }
     }
   }
-  }
-
 `;
 
 export default function Header() {
